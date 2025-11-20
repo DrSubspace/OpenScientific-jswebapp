@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenScientific | The Future of Science & Tech</title>
+    <meta name="description" content="Breaking news and deep dives into the world of Science and Technology.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-atom"></i> Open<span class="highlight">Scientific</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="category.html?category=tech">Technology</a></li>
+                    <li><a href="category.html?category=science">Science</a></li>
+                    <li><a href="category.html?category=space">Space</a></li>
+                    <li><a href="category.html?category=ai">AI</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-icon" id="search-toggle"><i class="fa-solid fa-search"></i></button>
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar" id="search-bar">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="search-input"
+                        placeholder="Search articles by title, category, or keywords...">
+                    <button class="btn-icon" id="search-close"><i class="fa-solid fa-times"></i></button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge">Featured Story</span>
+                    <h1>The Quantum Leap: <br>Computing Reimagined</h1>
+                    <p>Scientists achieve a new breakthrough in stable quantum bits, paving the way for error-free
+                        quantum
+                        computing.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary">Read Article</button>
+                        <button class="btn-secondary">Explore Topic</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-quantum.png" alt="Quantum Computer">
+                    <div class="hero-glow"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="news-section">
+                <div class="section-header">
+                    <h2>Latest Discoveries</h2>
+                    <div class="filter-tabs">
+                        <button class="tab active" data-category="all">All</button>
+                        <button class="tab" data-category="tech">Tech</button>
+                        <button class="tab" data-category="science">Science</button>
+                        <button class="tab" data-category="space">Space</button>
+                    </div>
+                </div>
+
+                <div id="news-grid" class="news-grid">
+                    <!-- Content injected via JS -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Open<span class="highlight">Scientific</span></h3>
+                    <p>Illuminating the unknown.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OpenScientific. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

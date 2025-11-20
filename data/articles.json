@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "The Future of AI: Beyond Generative Models",
+        "excerpt": "Researchers are exploring the next frontier of artificial intelligence, moving towards reasoning and autonomous decision-making systems.",
+        "category": "tech",
+        "date": "Oct 12, 2025",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+        "content": "<p>Generative AI has changed the world, but what comes next? Researchers at top institutions are now pivoting towards <strong>System 2 AI</strong>—systems capable of deliberate reasoning, planning, and self-correction.</p><h3>The Limits of LLMs</h3><p>Current Large Language Models (LLMs) are impressive at pattern matching but struggle with logical consistency and truthfulness. The next generation of AI aims to solve this by integrating symbolic reasoning with neural networks.</p><h3>Autonomous Agents</h3><p>We are also seeing the rise of autonomous agents that can perform complex tasks on behalf of users, from coding entire applications to managing supply chains.</p>"
+    },
+    {
+        "id": 2,
+        "title": "Mars Colonization: The First 100 Days",
+        "excerpt": "A detailed look at the survival plan for the first human settlers on the Red Planet, from habitat construction to resource management.",
+        "category": "space",
+        "date": "Oct 10, 2025",
+        "image": "https://images.unsplash.com/photo-1614728853913-1e2203d57b45?auto=format&fit=crop&q=80&w=800",
+        "content": "<p>The first human mission to Mars is slated for the late 2030s. The first 100 days will be critical for survival.</p><h3>Habitat Construction</h3><p>Upon landing, the crew's first priority will be to deploy 3D-printed habitats using Martian regolith. These structures must shield astronauts from lethal radiation and dust storms.</p><h3>Water and Oxygen</h3><p>Life support systems will rely on extracting water ice from the subsurface and splitting it into oxygen and hydrogen fuel.</p>"
+    },
+    {
+        "id": 3,
+        "title": "CRISPR 2.0: Eradicating Genetic Diseases",
+        "excerpt": "New gene-editing techniques promise to cure hereditary conditions with unprecedented precision and safety.",
+        "category": "science",
+        "date": "Oct 08, 2025",
+        "image": "https://images.unsplash.com/photo-1530224264768-7ff8c1789d79?auto=format&fit=crop&q=80&w=800",
+        "content": "<p>CRISPR-Cas9 was just the beginning. New 'prime editing' techniques allow for search-and-replace editing of the genome without making double-strand breaks.</p><h3>Targeting Sickle Cell</h3><p>Clinical trials are already showing high success rates in curing Sickle Cell Anemia using these advanced methods.</p>"
+    },
+    {
+        "id": 4,
+        "title": "Quantum Internet: A New Era of Security",
+        "excerpt": "Scientists successfully teleport information across a metropolitan network, bringing the quantum internet one step closer to reality.",
+        "category": "tech",
+        "date": "Oct 05, 2025",
+        "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800",
+        "content": "<p>Quantum entanglement allows for unhackable communication. Recent experiments have successfully distributed quantum keys over 50 kilometers of standard fiber optic cable.</p>"
+    },
+    {
+        "id": 5,
+        "title": "Deep Ocean Mysteries Revealed",
+        "excerpt": "Autonomous submersibles discover new bioluminescent species in the Mariana Trench, challenging our understanding of life in the deep.",
+        "category": "science",
+        "date": "Oct 03, 2025",
+        "image": "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=800",
+        "content": "<p>The deep ocean remains less explored than the surface of Mars. New autonomous drones are changing that, revealing a vibrant ecosystem thriving in total darkness.</p>"
+    },
+    {
+        "id": 6,
+        "title": "The Search for Exoplanets Continues",
+        "excerpt": "NASA's latest telescope captures images of a potentially habitable super-Earth in a nearby star system.",
+        "category": "space",
+        "date": "Oct 01, 2025",
+        "image": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800",
+        "content": "<p>The James Webb Space Telescope has identified K2-18b, a planet in the habitable zone that shows strong signatures of water vapor and methane.</p>"
+    }
+]

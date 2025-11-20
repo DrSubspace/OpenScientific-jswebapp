@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | OpenScientific</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-atom"></i> Open<span class="highlight">Scientific</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html?category=tech">Technology</a></li>
+                    <li><a href="category.html?category=science">Science</a></li>
+                    <li><a href="category.html?category=space">Space</a></li>
+                    <li><a href="category.html?category=ai">AI</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-icon"><i class="fa-solid fa-search"></i></button>
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <!-- Article Content -->
+        <main class="article-container">
+            <div id="article-content" class="article-wrapper">
+                <!-- Content injected via JS -->
+                <div class="loading-spinner">Loading article...</div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Open<span class="highlight">Scientific</span></h3>
+                    <p>Illuminating the unknown.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OpenScientific. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/article.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

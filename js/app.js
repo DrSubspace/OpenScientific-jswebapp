@@ -115,11 +115,24 @@ tabs.forEach(tab => {
 
 // Search Toggle Event Listeners
 if (searchToggle) {
-    searchToggle.addEventListener('click', () => {
-        searchBar.classList.add('active');
-        searchInput.focus();
+    searchToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent document click from closing it immediately
+        searchBar.classList.toggle('active');
+        if (searchBar.classList.contains('active')) {
+            searchInput.focus();
+        }
     });
 }
+
+// Close when clicking outside
+document.addEventListener('click', (e) => {
+    if (searchBar && searchBar.classList.contains('active')) {
+        // If click is NOT inside the search bar AND NOT on the toggle button
+        if (!searchBar.contains(e.target) && !searchToggle.contains(e.target)) {
+            searchBar.classList.remove('active');
+        }
+    }
+});
 
 if (searchClose) {
     searchClose.addEventListener('click', () => {

@@ -48,3 +48,40 @@ function searchArticles(articles, query) {
             (article.content && article.content.toLowerCase().includes(lowerQuery));
     });
 }
+
+// Mobile Menu Logic (Shared)
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const navCloseBtn = document.querySelector('.nav-close-btn');
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+    }
+
+    if (navCloseBtn && navLinks) {
+        navCloseBtn.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    }
+
+    // Close mobile menu when clicking a link
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navLinks && navLinks.classList.contains('active')) {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        }
+    });
+});

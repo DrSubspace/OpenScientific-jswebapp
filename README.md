@@ -1,5 +1,13 @@
 # OpenScientific
 
+## Mika's Easter egg
+
+The homepage's **Click Here Mika!** link opens `mika.html`. Selecting **Yes** replaces the question with the thank-you message and a link to `temperature.html`. Selecting **No** moves that button within the answer area without covering **Yes**. It supports mouse, touch, and keyboard clicks, stays within the mobile layout, and honors reduced-motion preferences for the celebration animation.
+
+The temperature page uses the dependency-free Canvas component in `js/temperature-sim.js` and `css/temperature-sim.css`, with initial temperatures of 600 K and 40 K. The component's license is in `TEMPERATURE-LICENSE`.
+
+The invitation is present in both `index.html` and `js/app.js` because the homepage's featured story is rebuilt when articles load. Personal-page behavior and styling are isolated in `js/mika.js` and `css/mika.css`. No response is stored or transmitted. The new pages include `noindex, nofollow` metadata; they remain accessible to anyone with the URLs. Refreshing `mika.html` starts the question again.
+
 A modern, responsive science and technology news website built for GitHub Pages.
 
 ![OpenScientific Banner](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200&h=300)

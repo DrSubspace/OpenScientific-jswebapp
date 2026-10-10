@@ -1,0 +1,68 @@
+.ts-sim {
+  /* Reuse OpenScientific's design tokens when embedded on the site. */
+  --ts-ink: var(--text-main, #ffffff);
+  --ts-muted: var(--text-muted, #a0a0b0);
+  --ts-border: rgba(255, 255, 255, 0.1);
+  --ts-surface: var(--bg-card, #161622);
+  --ts-dark: var(--bg-dark, #0a0a12);
+  --ts-primary: var(--primary, #00f2ff);
+  --ts-primary-glow: var(--primary-glow, rgba(0, 242, 255, 0.3));
+  --ts-secondary: var(--secondary, #7000ff);
+  --ts-chamber-center: #1c2338;
+  --ts-chamber-edge: #11121f;
+  --ts-wall: #677897;
+  --ts-gate-open: #8b9bb7;
+  color-scheme: dark;
+  font: 14px/1.6 var(--font-body, 'Inter', system-ui, sans-serif);
+  color: var(--ts-ink);
+  background: var(--ts-surface);
+  border: 1px solid var(--ts-border);
+  border-radius: var(--radius-md, 16px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  container-type: inline-size;
+}
+.ts-sim *, .ts-sim *::before, .ts-sim *::after { box-sizing: border-box; }
+.ts-sim button, .ts-sim input { font: inherit; }
+.ts-sim .ts-topline { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 19px 26px; border-bottom: 1px solid var(--ts-border); }
+.ts-sim .ts-live { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; }
+.ts-sim .ts-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ts-primary); box-shadow: 0 0 10px var(--ts-primary-glow); }
+.ts-sim .ts-model { color: var(--ts-muted); font-size: 11px; letter-spacing: .05em; }
+.ts-sim .ts-readings { display: grid; grid-template-columns: 1fr 1fr; padding: 22px 4% 0; text-align: center; }
+.ts-sim .ts-chamber-label { display: block; color: var(--ts-muted); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.ts-sim .ts-reading { display: block; font-family: var(--font-heading, 'Outfit', system-ui, sans-serif); font-size: 36px; font-weight: 500; line-height: 1.35; letter-spacing: -.025em; font-variant-numeric: tabular-nums; }
+.ts-sim .ts-unit { font-size: 15px; font-weight: 400; letter-spacing: 0; color: var(--ts-muted); }
+.ts-sim .ts-count { font-size: 11px; color: var(--ts-muted); font-variant-numeric: tabular-nums; }
+.ts-sim .ts-canvas { width: 100%; height: auto; aspect-ratio: 900 / 410; display: block; }
+.ts-sim .ts-legend { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 11px; color: var(--ts-muted); margin: 0 16px 22px; }
+.ts-sim .ts-spectrum { width: 92px; height: 5px; background: linear-gradient(90deg, #00daff, #a99bff, #ff9769); border-radius: 4px; }
+.ts-sim .ts-controls { padding: 23px 26px; background: var(--ts-dark); border-top: 1px solid var(--ts-border); }
+.ts-sim .ts-sliders { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.ts-sim .ts-slider-label { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 4px 10px; font-size: 12px; margin-bottom: 9px; }
+.ts-sim .ts-slider-label output { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.ts-sim .ts-range { display: block; width: 100%; margin: 0; min-height: 24px; accent-color: var(--ts-primary); cursor: pointer; }
+.ts-sim .ts-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.ts-sim .ts-button { appearance: none; border: 1px solid var(--ts-muted); background: transparent; color: var(--ts-ink); border-radius: var(--radius-sm, 8px); padding: 11px 17px; min-height: 44px; cursor: pointer; font-size: 12px; font-weight: 600; transition: background .2s, color .2s, border-color .2s, box-shadow .2s; }
+.ts-sim .ts-button:hover { border-color: var(--ts-primary); color: var(--ts-primary); }
+.ts-sim .ts-button:focus-visible, .ts-sim .ts-range:focus-visible { outline: 3px solid var(--ts-primary); outline-offset: 3px; }
+.ts-sim .ts-primary { color: var(--ts-dark); background: var(--ts-primary); border-color: var(--ts-primary); min-width: 172px; text-transform: uppercase; letter-spacing: .5px; }
+.ts-sim .ts-primary:hover { color: var(--ts-dark); background: var(--ts-ink); border-color: var(--ts-ink); box-shadow: 0 0 20px var(--ts-primary-glow); }
+.ts-sim .ts-hint { color: var(--ts-muted); font-size: 11px; margin: 12px 0 0; }
+.ts-sim .ts-state { margin-left: auto; display: inline-flex; align-items: center; gap: 7px; color: var(--ts-muted); font-size: 11px; }
+.ts-sim .ts-state-dot { width: 6px; height: 6px; background: var(--ts-muted); border-radius: 50%; }
+.ts-sim .ts-state-dot[data-open="true"] { background: var(--ts-primary); box-shadow: 0 0 10px var(--ts-primary-glow); }
+.ts-sim .ts-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@container (max-width: 530px) {
+  .ts-sim .ts-topline { padding: 15px 16px; }
+  .ts-sim .ts-model { display: none; }
+  .ts-sim .ts-controls { padding: 18px 16px; }
+  .ts-sim .ts-sliders { gap: 20px; }
+  .ts-sim .ts-reading { font-size: 27px; }
+  .ts-sim .ts-readings { padding-top: 18px; }
+  .ts-sim .ts-state { margin-left: 0; flex-basis: 100%; margin-top: 5px; }
+  .ts-sim .ts-button { padding: 10px 13px; min-height: 44px; }
+  .ts-sim .ts-primary { min-width: 0; }
+  .ts-sim .ts-slider-label { min-height: 42px; }
+}
+@media (prefers-reduced-motion: reduce) { .ts-sim .ts-button { transition: none; } }

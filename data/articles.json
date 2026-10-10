@@ -1,5 +1,17 @@
 [
     {
+        "id": 7,
+        "title": "OpenAI Publishes Results on Open Math Problems",
+        "excerpt": "OpenAI's October 6 release shares AI-generated results on open research problems, alongside manuscripts and computer-checkable proofs for public scrutiny.",
+        "category": "tech",
+        "date": "Oct 10, 2026",
+        "featured": true,
+        "image": "images/openai-math-research.webp",
+        "imageAlt": "An abstract cyan and violet mathematical surface with a luminous wireframe mesh and connected nodes",
+        "imageCaption": "AI-generated editorial illustration of mathematical research; not a visualization of a specific proof.",
+        "content": "<p>On October 6, 2026, OpenAI <a href=\"https://openai.com/index/sharing-ai-progress-in-mathematics/\">announced a collection of new mathematical results</a> produced by an unreleased internal model. It published the research on GitHub, giving mathematicians access to manuscripts and supporting proof materials.</p><h3>A collection of new research</h3><p>As of October 10, the <a href=\"https://github.com/openai/math\">public repository</a> lists 719 manuscripts grouped into 372 families. Each family brings together related work, such as a principal result, companion arguments, consequences, or alternative proofs. These counts describe the collection, rather than a one-to-one tally of independently solved problems.</p><h3>Making proofs checkable</h3><p>The release includes formal proofs written in <strong>Lean</strong>, which lets a computer check mathematical arguments. The repository reports that roughly 42% of its top-line results have been formalized. OpenAI says it will add more formalizations as they become available.</p><p>OpenAI also released ten summaries of the model's reasoning, information about attempted problems, and estimates of computational effort. The company describes the average result as using compute equivalent to roughly three hours of ChatGPT Pro thinking.</p><h3>What still needs checking</h3><p>The repository explicitly says its results are at different stages of verification and that some unformalized results could contain issues. It commits to preserving earlier versions and recording corrections. Readers should evaluate individual papers and their proof artifacts, rather than treating the entire release as settled mathematics.</p><p>For a closer look, read <a href=\"https://openai.com/index/sharing-ai-progress-in-mathematics/\">OpenAI's announcement</a> and browse the <a href=\"https://github.com/openai/math\">manuscripts, formalizations, and revision history</a>.</p>"
+    },
+    {
         "id": 1,
         "title": "The Future of AI: Beyond Generative Models",
         "excerpt": "Researchers are exploring the next frontier of artificial intelligence, moving towards reasoning and autonomous decision-making systems.",

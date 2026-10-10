@@ -11,20 +11,16 @@ let currentFilter = 'all';
 
 // Render Hero Section
 function renderHero() {
-    const heroHeader = document.querySelector('.hero');
     const heroContent = document.querySelector('.hero-content');
+    const heroImage = document.querySelector('.hero-image img');
 
     if (!heroContent || !window.articlesData || window.articlesData.length === 0) return;
 
-    // Select the first article as featured, or find one marked as featured
-    // For now, we'll use the first article
-    const featuredArticle = window.articlesData[0];
-
-    // Update Hero Background (Optional: could set a specific background image)
-    // heroHeader.style.backgroundImage = `url(${featuredArticle.image})`; 
-    // Note: The current CSS uses a gradient overlay .hero-bg, so we might want to keep that 
-    // or dynamically set the background of .hero-bg if we want the image there.
-    // For this design, let's update the text content.
+    const featuredArticle = window.articlesData.find(article => article.featured) || window.articlesData[0];
+    if (heroImage) {
+        heroImage.src = featuredArticle.image;
+        heroImage.alt = featuredArticle.imageAlt || featuredArticle.title;
+    }
 
     heroContent.innerHTML = `
         <a href="mika.html" class="mika-invitation">Click Here Mika! <span aria-hidden="true">&#9825;</span></a>
@@ -75,7 +71,7 @@ function renderArticles(filter = 'all', searchQuery = '') {
         card.className = 'card';
         card.innerHTML = `
             <div class="card-image">
-                <img src="${article.image}" alt="${article.title}" loading="lazy">
+                <img src="${article.image}" alt="${article.imageAlt || article.title}" loading="lazy">
                 <span class="card-category">${article.category}</span>
             </div>
             <div class="card-content">

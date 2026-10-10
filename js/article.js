@@ -42,8 +42,9 @@ function renderArticle(article) {
         </header>
         
         <div class="article-featured-image">
-            <img src="${article.image}" alt="${article.title}">
+            <img src="${article.image}" alt="${article.imageAlt || article.title}">
         </div>
+        ${article.imageCaption ? `<p class="article-image-caption">${article.imageCaption}</p>` : ''}
         
         <div class="article-body">
             <p class="lead">${article.excerpt}</p>

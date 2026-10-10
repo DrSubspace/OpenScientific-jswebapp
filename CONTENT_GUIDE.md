@@ -33,6 +33,11 @@ Each article in `articles.json` follows this format:
 | `date` | String | Publication date | `"Nov 20, 2025"` |
 | `image` | URL | Article image (see Image Tips below) | `"https://..."` |
 | `content` | HTML | Full article content with HTML tags | `"<p>...</p>"` |
+| `featured` | Boolean, optional | Set to `true` on one article to feature it on the homepage; otherwise the first article is used | `true` |
+| `imageAlt` | String, optional | Describe the picture for screen readers | `"An abstract mathematical surface"` |
+| `imageCaption` | String, optional | Credit or explain the image on the article page | `"AI-generated editorial illustration"` |
+
+The featured article supplies both the homepage headline and image. Put new stories at the beginning of the array to show them first in the news grid. When changing the featured story, also update the initial hero markup in `index.html` so the same content appears before JavaScript finishes loading.
 
 ## Step-by-Step: Adding a New Article
 
@@ -108,7 +113,7 @@ https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=cro
 
 ### Image Requirements
 
-- **Format**: JPG or PNG
+- **Format**: JPG, PNG, or WebP
 - **Size**: Optimized for web (use URL parameters above)
 - **Dimensions**: Minimum 800px wide
 - **License**: Must be free to use (Unsplash provides free images)

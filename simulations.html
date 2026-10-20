@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a0a12">
+    <title>Simulations | OpenScientific</title>
+    <meta name="description" content="Explore interactive science experiments, starting with a lightweight 2D temperature and particle-motion simulation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Outfit:wght@300;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/simulations.css">
+    
+</head>
+<body class="simulations-page">
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-atom"></i> Open<span class="highlight">Scientific</span>
+                </a>
+                <ul class="nav-links" id="site-navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html?category=tech">Technology</a></li>
+                    <li><a href="category.html?category=science">Science</a></li>
+                    <li><a href="category.html?category=space">Space</a></li>
+                    <li><a href="category.html?category=ai">AI</a></li>
+                    <li><a href="simulations.html" class="active" aria-current="page">Simulations</a></li>
+                    <li class="nav-close-item"><button class="nav-close-btn" type="button" aria-label="Close navigation"><i class="fa-solid fa-times" aria-hidden="true"></i></button></li>
+                </ul>
+                <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+        <main class="simulations-main">
+            <header class="simulation-heading">
+                <span class="badge">Interactive experiments</span>
+                <h1>Science you can explore.</h1>
+                <p>Change a variable. Watch what happens. Get a feel for the physics behind everyday phenomena.</p>
+            </header>
+            <section aria-label="Available simulations">
+                <article class="simulation-card">
+                    <div class="simulation-preview">
+                    <svg viewBox="0 0 520 320" fill="none" aria-hidden="true">
+                        <path d="M236 141H284V179H236" fill="#1c2338" stroke="#677897" stroke-width="2"/>
+                        <circle cx="140" cy="160" r="98" fill="#161622" stroke="#677897" stroke-width="2"/>
+                        <circle cx="380" cy="160" r="98" fill="#161622" stroke="#677897" stroke-width="2"/>
+                        <path d="M260 137V183" stroke="#00f2ff" stroke-width="3" stroke-dasharray="5 5"/>
+                        <g fill="#ff9769">
+                            <circle cx="90" cy="118" r="6"/><circle cx="170" cy="105" r="6"/>
+                            <circle cx="126" cy="176" r="6"/><circle cx="186" cy="188" r="6"/>
+                            <circle cx="93" cy="209" r="6"/><circle cx="144" cy="231" r="6"/>
+                            <circle cx="205" cy="145" r="6"/><circle cx="70" cy="164" r="6"/>
+                        </g>
+                        <g fill="#00daff">
+                            <circle cx="337" cy="112" r="6"/><circle cx="412" cy="102" r="6"/>
+                            <circle cx="369" cy="165" r="6"/><circle cx="432" cy="185" r="6"/>
+                            <circle cx="333" cy="211" r="6"/><circle cx="383" cy="231" r="6"/>
+                            <circle cx="444" cy="144" r="6"/><circle cx="312" cy="161" r="6"/>
+                        </g>
+                        <g stroke="#ff9769" stroke-opacity=".45" stroke-width="2" stroke-linecap="round">
+                            <path d="M78 123L62 130M158 110L145 117M174 192L160 198M194 140L181 134"/>
+                        </g>
+                        <g stroke="#00daff" stroke-opacity=".45" stroke-width="2" stroke-linecap="round">
+                            <path d="M328 117L322 120M402 107L397 110M423 189L418 192M435 139L430 136"/>
+                        </g>
+                    </svg>
+                    </div>
+                    <div class="simulation-card-content">
+                        <span class="badge">Physics · Thermal motion</span>
+                        <h2>Temperature, in motion.</h2>
+                        <p>Explore how particle motion gives rise to temperature. Set two gases to different temperatures, open the connection, and watch them exchange energy.</p>
+                        <a class="btn-primary" href="temperature.html">Launch simulation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Open<span class="highlight">Scientific</span></h3>
+                    <p>Illuminating the unknown.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OpenScientific. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

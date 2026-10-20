@@ -23,7 +23,6 @@ function renderHero() {
     }
 
     heroContent.innerHTML = `
-        <a href="mika.html" class="mika-invitation">Click Here Mika! <span aria-hidden="true">&#9825;</span></a>
         <span class="badge">Featured Story</span>
         <h1>${featuredArticle.title}</h1>
         <p>${featuredArticle.excerpt}</p>

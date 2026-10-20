@@ -20,7 +20,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/mika.css">
 </head>
 
 <body>
@@ -31,19 +30,20 @@
                 <a href="index.html" class="logo">
                     <i class="fa-solid fa-atom"></i> Open<span class="highlight">Scientific</span>
                 </a>
-                <ul class="nav-links">
+                <ul class="nav-links" id="site-navigation">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="category.html?category=tech">Technology</a></li>
                     <li><a href="category.html?category=science">Science</a></li>
                     <li><a href="category.html?category=space">Space</a></li>
                     <li><a href="category.html?category=ai">AI</a></li>
-                    <button class="nav-close-btn"><i class="fa-solid fa-times"></i></button>
+                    <li><a href="simulations.html">Simulations</a></li>
+                    <li class="nav-close-item"><button class="nav-close-btn" type="button" aria-label="Close navigation"><i class="fa-solid fa-times" aria-hidden="true"></i></button></li>
                 </ul>
                 <div class="nav-actions">
                     <button class="btn-icon" id="search-toggle"><i class="fa-solid fa-search"></i></button>
                     <button class="btn-primary">Subscribe</button>
                 </div>
-                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+                <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
             </div>
 
             <!-- Search Bar -->
@@ -61,7 +61,6 @@
         <header id="home" class="hero">
             <div class="hero-container">
                 <div class="hero-content">
-                    <a href="mika.html" class="mika-invitation">Click Here Mika! <span aria-hidden="true">&#9825;</span></a>
                     <span class="badge">Featured Story</span>
                     <h1>OpenAI Publishes Results on Open Math Problems</h1>
                     <p>OpenAI's October 6 release shares AI-generated results on open research problems, alongside manuscripts and computer-checkable proofs for public scrutiny.</p>

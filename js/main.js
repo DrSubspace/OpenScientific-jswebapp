@@ -54,34 +54,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const navCloseBtn = document.querySelector('.nav-close-btn');
+    if (!mobileMenuBtn || !navLinks) return;
 
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.add('active');
-        });
+    function setMenuOpen(open, restoreFocus = false) {
+        navLinks.classList.toggle('active', open);
+        mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        if (open) navLinks.querySelector('a').focus();
+        else if (restoreFocus) mobileMenuBtn.focus();
     }
 
-    if (navCloseBtn && navLinks) {
-        navCloseBtn.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    }
-
-    // Close mobile menu when clicking a link
-    if (navLinks) {
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (navLinks && navLinks.classList.contains('active')) {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                navLinks.classList.remove('active');
-            }
+    mobileMenuBtn.addEventListener('click', () => {
+        setMenuOpen(!navLinks.classList.contains('active'));
+    });
+    if (navCloseBtn) navCloseBtn.addEventListener('click', () => setMenuOpen(false, true));
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMenuOpen(false));
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navLinks.classList.contains('active')) setMenuOpen(false, true);
+    });
+    document.addEventListener('click', (event) => {
+        if (navLinks.classList.contains('active') && !navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+            setMenuOpen(false);
         }
     });
+    window.matchMedia('(max-width: 1100px)').addEventListener('change', () => setMenuOpen(false));
 });

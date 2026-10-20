@@ -1,0 +1,53 @@
+.simulations-page {
+    background: radial-gradient(ellipse at 10% 10%, rgba(0, 242, 255, .035), transparent 45%),
+        radial-gradient(ellipse at 95% 45%, rgba(112, 0, 255, .065), transparent 50%), var(--bg-dark);
+}
+
+.simulations-main {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 140px 0 64px;
+    min-height: 75vh;
+}
+
+.simulation-heading { margin-bottom: 36px; }
+.simulation-heading h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -.035em;
+    margin: 0 0 18px;
+}
+.simulation-heading p { max-width: 650px; color: var(--text-muted); }
+.simulation-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: var(--radius-lg);
+}
+.simulation-preview {
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: radial-gradient(ellipse at center, rgba(0, 242, 255, .07), transparent 70%), var(--bg-dark);
+}
+.simulation-preview svg { width: 100%; height: auto; }
+.simulation-card-content { align-self: center; padding: 40px; }
+.simulation-card-content h2 { font-size: clamp(26px, 3vw, 36px); line-height: 1.2; margin-bottom: 16px; }
+.simulation-card-content p { color: var(--text-muted); margin-bottom: 24px; }
+.simulation-card-content .btn-primary { display: inline-flex; align-items: center; gap: 12px; }
+.simulation-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); margin-bottom: 24px; font-size: 14px; }
+.simulation-back:hover { color: var(--primary); }
+.simulation-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 30px; }
+.simulation-notes h2 { font-size: 17px; margin-bottom: 8px; }
+.simulation-notes p { color: var(--text-muted); font-size: 14px; }
+.simulations-page a:focus-visible { outline: 3px solid var(--primary); outline-offset: 5px; }
+
+@media (max-width: 768px) {
+    .simulations-main { width: calc(100% - 32px); padding: 120px 0 40px; }
+    .simulation-card { grid-template-columns: 1fr; }
+    .simulation-preview { padding: 20px; }
+    .simulation-card-content { padding: 28px; }
+    .simulation-notes { grid-template-columns: 1fr; gap: 24px; }
+}

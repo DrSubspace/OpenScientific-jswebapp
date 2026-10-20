@@ -33,11 +33,11 @@ Each article in `articles.json` follows this format:
 | `date` | String | Publication date | `"Nov 20, 2025"` |
 | `image` | URL | Article image (see Image Tips below) | `"https://..."` |
 | `content` | HTML | Full article content with HTML tags | `"<p>...</p>"` |
-| `featured` | Boolean, optional | Set to `true` on one article to feature it on the homepage; otherwise the first article is used | `true` |
+| `featured` | Boolean, optional | Set to `true` on one article to feature it on the News page; otherwise the first article is used | `true` |
 | `imageAlt` | String, optional | Describe the picture for screen readers | `"An abstract mathematical surface"` |
 | `imageCaption` | String, optional | Credit or explain the image on the article page | `"AI-generated editorial illustration"` |
 
-The featured article supplies both the homepage headline and image. Put new stories at the beginning of the array to show them first in the news grid. When changing the featured story, also update the initial hero markup in `index.html` so the same content appears before JavaScript finishes loading.
+Articles are sorted by publication date. Home previews the three newest articles, while `news.html` contains the full feed, filters, search, and featured story. The featured article supplies the News hero headline and image. When changing it, also update the initial hero markup in `news.html` so the same content appears before JavaScript finishes loading.
 
 ## Step-by-Step: Adding a New Article
 
@@ -224,3 +224,25 @@ python -m http.server 8000
 ---
 
 **Pro Tip**: Keep a backup copy of `articles.json` before making changes, especially when first learning!
+
+
+## Adding a Simulation
+
+1. Add the experiment's HTML, JavaScript, and CSS files to the site.
+2. Add a lightweight preview image to `images/`.
+3. Add an entry to `data/simulations.json` with a unique `id`, `title`, `description`, `category`, ISO `date`, relative `url`, `image`, and descriptive `imageAlt`.
+
+```json
+{
+  "id": "temperature",
+  "title": "Temperature, in motion.",
+  "description": "Explore how particle motion gives rise to temperature.",
+  "category": "Physics · Thermal motion",
+  "date": "2026-10-20",
+  "url": "temperature.html",
+  "image": "images/temperature-preview.svg",
+  "imageAlt": "Two gas chambers filled with moving particles"
+}
+```
+
+Use the experiment's publication date. The catalog is sorted newest first. Home shows the two newest simulations; Simulations shows the complete catalog. Both update from this file without editing their page layouts. Preserve the shared News / Simulations navigation on new experiment pages and link the logo to `index.html`.

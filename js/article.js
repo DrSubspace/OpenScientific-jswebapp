@@ -52,7 +52,7 @@ function renderArticle(article) {
         </div>
         
         <div class="article-actions">
-            <a href="index.html" class="btn-secondary"><i class="fa-solid fa-arrow-left"></i> Back to News</a>
+            <a href="news.html" class="btn-secondary"><i class="fa-solid fa-arrow-left"></i> Back to News</a>
         </div>
     `;
 }

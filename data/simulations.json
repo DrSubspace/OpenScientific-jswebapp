@@ -1,0 +1,12 @@
+[
+    {
+        "id": "temperature",
+        "title": "Temperature, in motion.",
+        "description": "Explore how particle motion gives rise to temperature. Set two gases to different temperatures, open the connection, and watch them exchange energy.",
+        "category": "Physics · Thermal motion",
+        "date": "2026-10-20",
+        "url": "temperature.html",
+        "image": "images/temperature-preview.svg",
+        "imageAlt": "Two connected gas chambers with fast orange particles on the left and slower cyan particles on the right"
+    }
+]

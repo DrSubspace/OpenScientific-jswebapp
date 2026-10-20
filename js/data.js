@@ -8,6 +8,7 @@ async function loadArticles() {
             throw new Error(`Failed to load articles: ${response.status}`);
         }
         const articles = await response.json();
+        articles.sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0));
         window.articlesData = articles;
 
         // Trigger a custom event so pages know data is ready

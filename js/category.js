@@ -90,7 +90,7 @@ function renderArticles(articles) {
         newsGrid.innerHTML = `
             <div class="no-results" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
                 <p class="error-msg">No articles found matching your criteria.</p>
-                <a href="index.html" class="btn-secondary">Go Back Home</a>
+                <a href="news.html" class="btn-secondary">Browse all news</a>
             </div>
         `;
         return;
@@ -101,7 +101,7 @@ function renderArticles(articles) {
         card.className = 'card';
         card.innerHTML = `
             <div class="card-image">
-                <img src="${article.image}" alt="${article.title}" loading="lazy">
+                <img src="${article.image}" alt="${article.imageAlt || article.title}" loading="lazy">
                 <span class="card-category">${article.category}</span>
             </div>
             <div class="card-content">

@@ -136,6 +136,7 @@ if (searchClose) {
         searchInput.value = '';
         currentSearchQuery = '';
         renderArticles(currentFilter, '');
+        searchInput.focus();
     });
 }
 

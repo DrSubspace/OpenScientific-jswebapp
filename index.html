@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenScientific | The Future of Science & Tech</title>
-    <meta name="description" content="Breaking news and deep dives into the world of Science and Technology.">
+    <title>OpenScientific | Discover & Explore</title>
+    <meta name="description" content="Discover science and technology news, then explore the ideas through interactive simulations.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,83 +19,71 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/simulations.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
-<body>
+<body class="home-page">
     <div class="app-container">
-        <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <i class="fa-solid fa-atom"></i> Open<span class="highlight">Scientific</span>
+                <a href="index.html" class="logo" aria-label="OpenScientific home">
+                    <i class="fa-solid fa-atom" aria-hidden="true"></i> Open<span class="highlight">Scientific</span>
                 </a>
                 <ul class="nav-links" id="site-navigation">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="category.html?category=tech">Technology</a></li>
-                    <li><a href="category.html?category=science">Science</a></li>
-                    <li><a href="category.html?category=space">Space</a></li>
-                    <li><a href="category.html?category=ai">AI</a></li>
+                    <li><a href="news.html">News</a></li>
                     <li><a href="simulations.html">Simulations</a></li>
-                    <li class="nav-close-item"><button class="nav-close-btn" type="button" aria-label="Close navigation"><i class="fa-solid fa-times" aria-hidden="true"></i></button></li>
                 </ul>
-                <div class="nav-actions">
-                    <button class="btn-icon" id="search-toggle"><i class="fa-solid fa-search"></i></button>
-                    <button class="btn-primary">Subscribe</button>
-                </div>
-                <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="search-bar" id="search-bar">
-                <div class="search-input-wrapper">
-                    <i class="fa-solid fa-search"></i>
-                    <input type="text" id="search-input"
-                        placeholder="Search articles by title, category, or keywords...">
-                    <button class="btn-icon" id="search-close"><i class="fa-solid fa-times"></i></button>
-                </div>
             </div>
         </nav>
-
-        <!-- Hero Section -->
-        <header id="home" class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <span class="badge">Featured Story</span>
-                    <h1>OpenAI Publishes Results on Open Math Problems</h1>
-                    <p>OpenAI's October 6 release shares AI-generated results on open research problems, alongside manuscripts and computer-checkable proofs for public scrutiny.</p>
-                    <div class="hero-actions">
-                        <a href="article.html?id=7" class="btn-primary">Read Article</a>
-                        <a href="category.html?category=tech" class="btn-secondary">Explore Topic</a>
+        <main class="home-main">
+            <header class="home-intro">
+                <span class="badge">A place for curious minds</span>
+                <h1>Discover the science.<br>Explore it yourself.</h1>
+                <p>Follow new ideas in science and technology, then get hands-on with interactive experiments.</p>
+                <div class="home-actions">
+                    <a href="news.html" class="btn-secondary">Explore news</a>
+                    <a href="simulations.html" class="btn-primary">Try a simulation</a>
+                </div>
+            </header>
+            <div class="home-columns">
+                <section aria-labelledby="recent-news-heading">
+                    <div class="home-section-header"><h2 id="recent-news-heading">Recent news</h2><a href="news.html">All news →</a></div>
+                    <div class="home-news-list" id="home-news"><article class="home-news-card">
+                        <img src="images/openai-math-research.webp" alt="An abstract cyan and violet mathematical surface with a luminous wireframe mesh and connected nodes" loading="lazy">
+                        <div><p class="preview-meta">tech · Oct 10, 2026</p>
+                        <h3><a href="article.html?id=7">OpenAI Publishes Results on Open Math Problems</a></h3>
+                        <p class="preview-excerpt">OpenAI&#x27;s October 6 release shares AI-generated results on open research problems, alongside manuscripts and computer-checkable proofs for public scrutiny.</p></div>
+                    </article>
+<article class="home-news-card">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="The Future of AI: Beyond Generative Models" loading="lazy">
+                        <div><p class="preview-meta">tech · Oct 12, 2025</p>
+                        <h3><a href="article.html?id=1">The Future of AI: Beyond Generative Models</a></h3>
+                        <p class="preview-excerpt">Researchers are exploring the next frontier of artificial intelligence, moving towards reasoning and autonomous decision-making systems.</p></div>
+                    </article>
+<article class="home-news-card">
+                        <img src="https://images.unsplash.com/photo-1614728853913-1e2203d57b45?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Mars Colonization: The First 100 Days" loading="lazy">
+                        <div><p class="preview-meta">space · Oct 10, 2025</p>
+                        <h3><a href="article.html?id=2">Mars Colonization: The First 100 Days</a></h3>
+                        <p class="preview-excerpt">A detailed look at the survival plan for the first human settlers on the Red Planet, from habitat construction to resource management.</p></div>
+                    </article></div>
+                </section>
+                <section aria-labelledby="new-simulations-heading">
+                    <div class="home-section-header"><h2 id="new-simulations-heading">New simulations</h2><a href="simulations.html">All simulations →</a></div>
+                    <div class="home-simulations" data-simulations data-limit="2" data-heading="h3"><article class="simulation-card">
+                    <div class="simulation-preview">
+                    <img src="images/temperature-preview.svg" width="520" height="320" alt="Two connected gas chambers with fast orange particles on the left and slower cyan particles on the right">
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/openai-math-research.webp" alt="An abstract cyan and violet mathematical surface with a luminous wireframe mesh and connected nodes" width="1536" height="1024" fetchpriority="high">
-                    <div class="hero-glow"></div>
-                </div>
+                    <div class="simulation-card-content">
+                        <span class="badge">Physics · Thermal motion</span>
+                        <h3>Temperature, in motion.</h3>
+                        <p>Explore how particle motion gives rise to temperature. Set two gases to different temperatures, open the connection, and watch them exchange energy.</p>
+                        <a class="btn-primary" href="temperature.html">Launch simulation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article></div>
+                </section>
             </div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <section class="news-section">
-                <div class="section-header">
-                    <h2>Latest Discoveries</h2>
-                    <div class="filter-tabs">
-                        <button class="tab active" data-category="all">All</button>
-                        <button class="tab" data-category="tech">Tech</button>
-                        <button class="tab" data-category="science">Science</button>
-                        <button class="tab" data-category="space">Space</button>
-                    </div>
-                </div>
-
-                <div id="news-grid" class="news-grid">
-                    <!-- Content injected via JS -->
-                </div>
-            </section>
         </main>
-
-        <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -103,10 +91,9 @@
                     <p>Illuminating the unknown.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">About</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Contact</a>
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="simulations.html">Simulations</a>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -119,10 +106,9 @@
             </div>
         </footer>
     </div>
-
     <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/simulations.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | OpenScientific</title>
+    <meta name="description" content="Breaking news and deep dives into the world of Science and Technology.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="nav-content">
+                <a href="index.html" class="logo" aria-label="OpenScientific home">
+                    <i class="fa-solid fa-atom" aria-hidden="true"></i> Open<span class="highlight">Scientific</span>
+                </a>
+                <ul class="nav-links" id="site-navigation">
+                    <li><a href="news.html" class="active" aria-current="page">News</a></li>
+                    <li><a href="simulations.html">Simulations</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge">Featured Story</span>
+                    <h1>OpenAI Publishes Results on Open Math Problems</h1>
+                    <p>OpenAI's October 6 release shares AI-generated results on open research problems, alongside manuscripts and computer-checkable proofs for public scrutiny.</p>
+                    <div class="hero-actions">
+                        <a href="article.html?id=7" class="btn-primary">Read Article</a>
+                        <a href="category.html?category=tech" class="btn-secondary">Explore Topic</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/openai-math-research.webp" alt="An abstract cyan and violet mathematical surface with a luminous wireframe mesh and connected nodes" width="1536" height="1024" fetchpriority="high">
+                    <div class="hero-glow"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="news-section">
+                <div class="section-header">
+                    <h2>Latest news</h2>
+                    <div class="filter-tabs">
+                        <button class="tab active" data-category="all">All</button>
+                        <button class="tab" data-category="tech">Tech</button>
+                        <button class="tab" data-category="science">Science</button>
+                        <button class="tab" data-category="space">Space</button>
+                    </div>
+                </div>
+
+                <div class="news-search">
+                    <label for="search-input">Search news</label>
+                    <div class="news-search-controls" id="search-bar">
+                        <input type="search" id="search-input" placeholder="Search headlines, topics, or keywords...">
+                        <button class="btn-secondary" id="search-close" type="button">Clear</button>
+                    </div>
+                </div>
+                <div id="news-grid" class="news-grid">
+                    <p>Loading news...</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Open<span class="highlight">Scientific</span></h3>
+                    <p>Illuminating the unknown.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="simulations.html">Simulations</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OpenScientific. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

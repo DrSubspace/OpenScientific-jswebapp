@@ -19,41 +19,21 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/search.css">
+
 </head>
 
 <body>
     <div class="app-container">
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <i class="fa-solid fa-atom"></i> Open<span class="highlight">Scientific</span>
+                <a href="index.html" class="logo" aria-label="OpenScientific home">
+                    <i class="fa-solid fa-atom" aria-hidden="true"></i> Open<span class="highlight">Scientific</span>
                 </a>
                 <ul class="nav-links" id="site-navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="category.html?category=tech">Technology</a></li>
-                    <li><a href="category.html?category=science">Science</a></li>
-                    <li><a href="category.html?category=space">Space</a></li>
-                    <li><a href="category.html?category=ai">AI</a></li>
+                    <li><a href="news.html" class="active" aria-current="location">News</a></li>
                     <li><a href="simulations.html">Simulations</a></li>
-                    <li class="nav-close-item"><button class="nav-close-btn" type="button" aria-label="Close navigation"><i class="fa-solid fa-times" aria-hidden="true"></i></button></li>
                 </ul>
-                <div class="nav-actions">
-                    <button class="btn-icon" id="search-toggle"><i class="fa-solid fa-search"></i></button>
-                    <button class="btn-primary">Subscribe</button>
-                </div>
-                <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="search-bar" id="search-bar">
-                <div class="search-input-wrapper">
-                    <i class="fa-solid fa-search"></i>
-                    <input type="text" id="search-input"
-                        placeholder="Search articles by title, category, or keywords...">
-                    <button class="btn-icon" id="search-close"><i class="fa-solid fa-times"></i></button>
-                </div>
             </div>
         </nav>
 
@@ -64,6 +44,14 @@
                     <h2 id="category-title">Category</h2>
                 </div>
 
+                <a class="section-back" href="news.html">← All news</a>
+                <div class="news-search">
+                    <label for="search-input">Search this topic</label>
+                    <div class="news-search-controls" id="search-bar">
+                        <input type="search" id="search-input" placeholder="Search headlines or keywords...">
+                        <button class="btn-secondary" id="search-close" type="button">Clear</button>
+                    </div>
+                </div>
                 <div id="news-grid" class="news-grid">
                     <!-- Content injected via JS -->
                 </div>
@@ -78,10 +66,9 @@
                     <p>Illuminating the unknown.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">About</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Contact</a>
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="simulations.html">Simulations</a>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>

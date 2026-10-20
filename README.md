@@ -1,12 +1,20 @@
 # OpenScientific
 
+## Site sections
+
+- `index.html` introduces the site and previews the three newest articles and two newest simulations.
+- `news.html` contains the featured story, full article feed, topic filters, and search.
+- `simulations.html` lists all experiments; the logo always returns to Home.
+
+News previews come from `data/articles.json`, sorted by publication date. Simulation previews come from `data/simulations.json`, sorted by their ISO date (`YYYY-MM-DD`). Add a simulation page, preview image, and catalog entry to show it automatically on both Home and Simulations. See [CONTENT_GUIDE.md](CONTENT_GUIDE.md).
+
 ## Interactive simulations
 
 The **Simulations** navigation tab opens `simulations.html`, the collection of interactive experiments. The temperature card opens `temperature.html`.
 
 The temperature page uses the dependency-free Canvas component in `js/temperature-sim.js` and `css/temperature-sim.css`, with initial temperatures of 600 K and 40 K. The component's license is in `TEMPERATURE-LICENSE`. The experiment is public and can be linked directly.
 
-A modern, responsive science and technology news website built for GitHub Pages.
+A responsive science and technology website with news and interactive simulations, built for GitHub Pages.
 
 ![OpenScientific Banner](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200&h=300)
 
@@ -85,7 +93,8 @@ GitHub Pages will rebuild automatically!
 
 ```
 openscientific/
-├── index.html              # Homepage
+├── index.html              # Overview and recent previews
+├── news.html               # Featured news, filters, and search
 ├── article.html            # Article detail page
 ├── category.html           # Category listing page
 ├── simulations.html        # Interactive experiment collection
@@ -94,12 +103,15 @@ openscientific/
 │   └── styles.css         # All styles
 ├── js/
 │   ├── data.js            # Loads articles from JSON
-│   ├── app.js             # Homepage logic
+│   ├── app.js             # News page logic
+│   ├── home.js            # Homepage news previews
+│   ├── simulations.js     # Shared simulation catalog renderer
 │   ├── article.js         # Article page logic
 │   ├── category.js        # Category page logic
 │   └── main.js            # Global functionality (subscribe toast)
 ├── data/
-│   └── articles.json      # ⭐ EDIT THIS to add articles
+│   ├── articles.json      # ⭐ EDIT THIS to add articles
+│   └── simulations.json   # Add simulation previews here
 ├── CONTENT_GUIDE.md       # Detailed content management guide
 └── README.md              # This file
 ```
@@ -152,8 +164,8 @@ Edit CSS variables in `css/styles.css`:
 ### Adding New Categories
 
 1. Add articles with the new category in `articles.json`
-2. Add category link to navigation in all HTML files
-3. Update filter tabs on homepage
+2. Add a topic filter on `news.html`
+3. Keep the main navigation focused on News and Simulations
 
 ## 📋 Article Format Reference
 

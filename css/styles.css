@@ -592,7 +592,8 @@ h3,
     margin: -1.25rem 0 2rem;
 }
 
-.article-body a {
+.article-body a,
+.article-image-caption a {
     color: var(--primary);
     text-decoration: underline;
     text-underline-offset: 3px;

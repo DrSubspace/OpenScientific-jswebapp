@@ -723,3 +723,9 @@ h3,
 .news-search-controls input { min-width: 0; flex: 1; background: var(--bg-card); color: var(--text-main); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius-sm); padding: 14px 16px; font: inherit; }
 .news-search-controls input:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .section-back { display: inline-block; color: var(--primary); margin-bottom: 24px; }
+
+/* Keep the historical Riemann portrait intact in landscape article previews. */
+.app-container img[src$="bernhard-riemann-1863.jpg"] {
+    object-fit: contain;
+    background: var(--bg-card);
+}
